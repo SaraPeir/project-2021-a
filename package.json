@@ -1,0 +1,55 @@
+{
+  "name": "project-2021-a",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run client\" \"npm run server\"",
+    "client": "webpack --mode development",
+    "server": "nodemon server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaraPeir/project-2021-a.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SaraPeir/project-2021-a/issues"
+  },
+  "homepage": "https://github.com/SaraPeir/project-2021-a#readme",
+  "dependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "@loadable/component": "^5.15.0",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.2.2",
+    "concurrently": "^6.2.0",
+    "css-loader": "^5.2.6",
+    "express": "^4.17.1",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^1.6.1",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
+    "redux": "^4.1.0",
+    "redux-thunk": "^2.3.0",
+    "sass": "^1.35.1",
+    "sass-loader": "^12.1.0",
+    "serialize-javascript": "^6.0.0",
+    "style-loader": "^3.0.0",
+    "webpack": "^5.40.0",
+    "webpack-bundle-analyzer": "^4.4.2",
+    "webpack-cli": "^4.7.2",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-plugin-dynamic-import-webpack": "^1.1.0",
+    "webpack-manifest-plugin": "^3.1.1",
+    "webpack-nano": "^1.1.1"
+  }
+}
