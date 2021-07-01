@@ -4,6 +4,5 @@ import loadable from "@loadable/component";
 // It's not included in main bundle any more
 
 export default loadable(() =>
-  import(/* webpackChunkName: "countdown" */ "./Countdown"),
-  {  noSsr: true }
+  import(/* webpackChunkName: "async_countdown" */ "./Countdown"),
 );

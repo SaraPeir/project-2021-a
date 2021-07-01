@@ -1,4 +1,4 @@
-(self["webpackChunkproject_2021_a"] = self["webpackChunkproject_2021_a"] || []).push([["countdown"],{
+(self["webpackChunkproject_2021_a"] = self["webpackChunkproject_2021_a"] || []).push([["async_countdown"],{
 
 /***/ "./src/client/asyncComponents/Countdown/Countdown.js":
 /*!***********************************************************!*\
@@ -39,4 +39,4 @@ function Countdown() {
 /***/ })
 
 }]);
-//# sourceMappingURL=countdown.a3e59044e167e93a8a01.js.map
+//# sourceMappingURL=async_countdown.502d500e9307f9293930.js.map

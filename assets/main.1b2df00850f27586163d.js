@@ -63,6 +63,44 @@ var App = function App(props) {
 
 /***/ }),
 
+/***/ "./src/client/asyncComponents/Countdown/AsyncCountdown.js":
+/*!****************************************************************!*\
+  !*** ./src/client/asyncComponents/Countdown/AsyncCountdown.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _loadable_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @loadable/component */ "./node_modules/@loadable/component/dist/loadable.esm.js");
+ // Countdown component is loaded by webpack only if user can see it. 
+// It's not included in main bundle any more
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_loadable_component__WEBPACK_IMPORTED_MODULE_0__.default)(function () {
+  return __webpack_require__.e(/*! import() | async_countdown */ "async_countdown").then(__webpack_require__.bind(__webpack_require__, /*! ./Countdown */ "./src/client/asyncComponents/Countdown/Countdown.js"));
+}));
+
+/***/ }),
+
+/***/ "./src/client/asyncComponents/Countdown/index.js":
+/*!*******************************************************!*\
+  !*** ./src/client/asyncComponents/Countdown/index.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _AsyncCountdown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AsyncCountdown */ "./src/client/asyncComponents/Countdown/AsyncCountdown.js");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_AsyncCountdown__WEBPACK_IMPORTED_MODULE_0__.default);
+
+/***/ }),
+
 /***/ "./src/client/index.js":
 /*!*****************************!*\
   !*** ./src/client/index.js ***!
@@ -88,8 +126,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ "use strict";
 /******/ 
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ __webpack_require__.O(0, ["async_components_vendors","node_vendors","shared_vendors","components_vendors"], () => (__webpack_exec__("./src/client/index.js")));
+/******/ __webpack_require__.O(0, ["node_vendors","shared_vendors","components_vendors"], () => (__webpack_exec__("./src/client/index.js")));
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);
-//# sourceMappingURL=main.de3e20cb39beebbfdb7b.js.map
+//# sourceMappingURL=main.1b2df00850f27586163d.js.map

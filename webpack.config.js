@@ -14,7 +14,7 @@ const loaderOptionPlugin = new LoaderOptionsPlugin({
 
 // from assets/manifest.json I don't want map files
 const webpackManifestPlugin = new WebpackManifestPlugin({
-  filter: (file) => !file.path.match(/\.map$/) && !file.path.match(/\.countdown$/)
+  filter: (file) => !file.path.match(/\.map$/) && !file.path.includes('async')
 })
 
 const bundleAnalyzerPlugin = new BundleAnalyzerPlugin()
@@ -64,12 +64,6 @@ const browserConfig = {
         test: /[\\/]src[\\/]client[\\/]components[\\/]/,
         chunks: "all",
         minSize: 0,
-      },
-      asyncComponents: {
-        name: "async_components_vendors",
-        test: /[\\/]src[\\/]client[\\/]asyncComponents[\\/]/,
-        chunks: "all",
-        minSize: 0,
       }
     },
   }
@@ -82,7 +76,6 @@ const serverConfig = {
   externals: [nodeExternals()],
   output: {
     path: path.resolve(__dirname, 'server'),
-    // path: __dirname,
     filename: 'server.js',
     // publicPath: '/'
   },
