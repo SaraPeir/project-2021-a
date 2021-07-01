@@ -14,7 +14,7 @@
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
+/******/ 			id: moduleId,
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
@@ -267,4 +267,4 @@
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=manifest.31b363bd520cbdcd576e.js.map
+//# sourceMappingURL=manifest.150e69901a08ac9ce22e.js.map

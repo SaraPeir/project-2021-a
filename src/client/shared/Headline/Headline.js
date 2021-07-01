@@ -1,5 +1,5 @@
 import React from "react";
-// import "./Headline.scss"
+import "./Headline.scss"
 
 const Headline = ({ children }) => {
   return <h2>{children}</h2>;

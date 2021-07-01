@@ -6,6 +6,7 @@ const miniCssExtractPlugin = require('mini-css-extract-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
+const devMode = process.env.NODE_ENV !== 'production';
 
 const loaderOptionPlugin = new LoaderOptionsPlugin({
   minimize: false,
@@ -36,6 +37,14 @@ const browserConfig = {
   module: {
     rules: [
       { test: /\.(js)$/, use: 'babel-loader' },
+      {
+        test: /\.s(c)ss$/,
+        use: [devMode ? 'style-loader' : miniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        // I cannot use style-loader and miniCssExtractPlugin loader in the same time, otherwise I get the error:
+        // ReferenceError: document is not defined at insertStyleElement 
+        // (https://github.com/webpack-contrib/style-loader/issues/439#issuecomment-566946315)
+        // Do not use style laoder and mini-css-extract-plugin loader together: https://www.npmjs.com/package/mini-css-extract-plugin
+      },
     ]
   },
   plugins: [webpackManifestPlugin, loaderOptionPlugin, bundleAnalyzerPlugin],
@@ -81,7 +90,12 @@ const serverConfig = {
   },
   module: {
     rules: [
-      { test: /\.(js)$/, use: 'babel-loader' }
+      { test: /\.(js)$/, use: 'babel-loader' },
+      {
+        test: /\.s(c)ss$/,
+        loader: 'ignore-loader'
+        // style files are ignored by server, since they are parsed only bu browser
+      },
     ]
   },
 }
